@@ -1,0 +1,8 @@
+.git
+.gitignore
+system.bak-3.1.10
+assets/media/
+application/logs/*
+application/cache/*
+*.log
+.env

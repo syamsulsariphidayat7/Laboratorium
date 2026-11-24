@@ -1,0 +1,40 @@
+.DS_Store
+
+# Secrets lokal (kredensial DB container)
+.env
+
+# Backup framework sebelum upgrade (CI 3.1.10 -> 3.1.13)
+system.bak-3.1.10
+
+# Media video demo terlalu besar untuk git (pakai file lokal / unduh terpisah)
+assets/media/portofolio/*.[Mm][Pp]4
+
+application/cache/*
+!application/cache/index.html
+
+application/logs/*
+!application/logs/index.html
+
+!application/*/.htaccess
+
+composer.lock
+
+user_guide_src/build/*
+user_guide_src/cilexer/build/*
+user_guide_src/cilexer/dist/*
+user_guide_src/cilexer/pycilexer.egg-info/*
+/vendor/
+
+# IDE Files
+#-------------------------
+/nbproject/
+.idea/*
+
+## Sublime Text cache files
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+/tests/tests/
+/tests/results/
