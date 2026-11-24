@@ -28,9 +28,16 @@ Belum / catatan:
   versi baru (menghapus data saat ini).
 - Belum ada test otomatis, belum ada environment production.
 
+## Git
+
+- Repo: `git@github.com:syamsulsiphidayat7/Laboratorium.git` (branch `main`).
+- Commit awal `6bb0289` sudah ter-push.
+- **Remote memakai `ssh://git@ssh.github.com:443/...`**, karena SSH port 22 di
+  mesin ini flaky (`Repository not found` intermiten). Kalau clone di mesin lain,
+  pakai URL `git@github.com:...` biasa.
+
 ## Langkah berikutnya
 
 1. Putuskan perbaikan 2 bug view (cukup kirim `'anggota' => array()` dari controller).
-2. Push repo ke `git@github.com:syamsulsiphidayat7/Laboratorium.git` (izin sudah ada).
-3. Kalau mau ke production: ganti password plain text → hash, `CI_ENV=production`,
+2. Kalau mau ke production: ganti password plain text → hash, `CI_ENV=production`,
    HTTPS, backup DB sebelum migration.
