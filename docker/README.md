@@ -38,7 +38,12 @@ Database diinisialisasi otomatis pada **start pertama** (volume masih kosong):
 | Asisten   | `1171010004`          | `dev123` |
 | Asisten   | `1171010005`          | `dev123` |
 
-## 3. Perintah harian
+## 3. Restart policy
+
+Container **tidak** auto-start saat boot. Jalankan manual dengan
+`docker compose up -d` setiap kali dibutuhkan.
+
+## 4. Perintah harian
 
 ```bash
 docker compose up -d          # start
@@ -52,7 +57,7 @@ docker compose exec db mariadb -ulab -plab laboratorium -e "SHOW TABLES;"
 Akses DB dari host (DBeaver/TablePlus): `127.0.0.1:3307`, user `lab`, pass `lab`.
 Root: `root` / `root` (port sama).
 
-## 4. Struktur file tambahan
+## 5. Struktur file tambahan
 
 ```
 Dockerfile            php:7.4-apache + mysqli + mod_rewrite + AllowOverride All
@@ -78,7 +83,7 @@ Yang diubah di kode aplikasi **hanya**:
 - `system/` → diganti CodeIgniter 3.1.13 (backup: `system.bak-3.1.10/`).
   `application/`, `index.php`, dan `.htaccess` tidak disentuh.
 
-## 5. Hal yang perlu diketahui
+## 6. Hal yang perlu diketahui
 
 1. **Password plain text.** `Auth.php` memakai `get_where` dengan password apa adanya
    (tanpa hash). Seed mengikuti itu. Jangan dipakai di production tanpa `password_hash()`.
